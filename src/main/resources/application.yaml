@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: notification-chat-service
+  data:
+    mongodb:
+      authenticationDatabase: admin
+      username: root
+      password: root
+      database: notification-chat-service
+      port: 27017
+      host: localhost
+      autoIndexCreation: true
+
+server:
+  port: 8085
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+logging:
+  level:
+    com.dudek.notificationchatservice: debug

@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @Builder
@@ -20,12 +19,9 @@ public class Notification {
     private String senderName;
     private String senderId;
     private String recipientId;
-    private List<String> recipientTypes;
-    private String sendTime;
+    private LocalDateTime sendTime;
     private String message;
     private String messageStatus;
     private String messageType;
     private String messageSubType;
-    private Boolean isRead;
-    private LocalDateTime receiptDate;
 }
